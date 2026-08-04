@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Project outputs
+outputs/
+synthetic/
+*.npy
+*.npz
+!tests/fixtures/**/*.npy
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Models / data (user-provided)
+data/
+models/
+*.mp4
+*.avi
+*.mkv
+
+# Coverage
+.coverage
+htmlcov/
+.pytest_cache/

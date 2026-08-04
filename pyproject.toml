@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "videoradar"
+version = "0.1.0"
+description = "Physics-first video-to-mmWave radar simulation for human pose estimation research"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [
+    { name = "Shuntian Zheng" },
+]
+keywords = [
+    "mmwave",
+    "radar",
+    "fmcw",
+    "human-pose-estimation",
+    "simulation",
+    "wireless-sensing",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "pyyaml>=6.0",
+    "typer>=0.12",
+    "rich>=13.0",
+    "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+vision = [
+    "torch>=2.0",
+    "opencv-python>=4.8",
+    "smplx>=0.1.28",
+]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "ruff>=0.4",
+]
+all = [
+    "videoradar[vision,dev]",
+]
+
+[project.scripts]
+videoradar = "videoradar.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/DandongExpress/VideoRadarSim"
+Repository = "https://github.com/DandongExpress/VideoRadarSim"
+Toolbox = "https://github.com/DandongExpress/RadarHPE-Toolbox"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["videoradar*"]
+
+[tool.setuptools.package-data]
+videoradar = ["radar/profiles/*.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

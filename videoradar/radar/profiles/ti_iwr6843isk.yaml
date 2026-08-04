@@ -1,0 +1,19 @@
+# TI IWR6843ISK — XRF55 dataset radar configuration (approximate)
+name: ti_iwr6843isk
+fc: 60.0e9
+bandwidth: 4.0e9
+chirp_duration: 55.0e-6
+num_chirps: 128
+num_adc_samples: 256
+sample_rate: 12.0e6
+tx_antennas: 3
+rx_antennas: 4
+tx_power_dbm: 12.0
+position: [0.0, 0.0, 1.8]
+azimuth_spacing: 0.5
+elevation_spacing: 0.5
+fft_config: doppler_angle
+range_max: 6.0
+azimuth_fov_deg: 120.0
+elevation_fov_deg: 30.0
+noise_floor_db: -78.0

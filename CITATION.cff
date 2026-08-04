@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use VideoRadarSim, please cite it and the relevant method papers."
+title: VideoRadarSim
+version: 0.1.0
+authors:
+  - family-names: Zheng
+    given-names: Shuntian
+repository-code: "https://github.com/DandongExpress/VideoRadarSim"
+license: MIT
+keywords:
+  - mmwave
+  - radar simulation
+  - human pose estimation
