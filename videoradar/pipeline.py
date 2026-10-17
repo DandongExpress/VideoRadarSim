@@ -16,6 +16,8 @@ from videoradar.scatter.triangle import mesh_to_scatterers
 from videoradar.vision.mesh_recovery import MeshSequence, recover_mesh_from_video
 
 
+
+
 @dataclass
 class SimulationResult:
     """Container for one synthetic mmWave sequence."""
