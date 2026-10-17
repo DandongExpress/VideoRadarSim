@@ -19,6 +19,9 @@ app = typer.Typer(
 )
 
 
+
+
+
 @app.command("simulate")
 def simulate(
     video: Path = typer.Argument(..., help="Input video path (or placeholder for synthetic demo)"),
