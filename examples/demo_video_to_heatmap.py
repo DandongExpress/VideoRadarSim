@@ -6,6 +6,8 @@ from pathlib import Path
 from videoradar import simulate_from_video
 
 
+
+
 def main() -> None:
     # Any path works in v0.1 — vision backend falls back to synthetic capsule motion
     video = Path("examples/placeholder.mp4")
